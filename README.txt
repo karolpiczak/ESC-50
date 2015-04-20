@@ -1,6 +1,6 @@
 # ESC-50: Dataset for Environmental Sound Classification
 # https://github.com/karoldvl/ESC-50/
-# http://dx.doi.org/10.7910/DVN/YDEPUT
+# https://dx.doi.org/10.7910/DVN/YDEPUT
 
 The ESC-50 dataset is a public labeled set of 2000 environmental recordings
 (50 classes, 40 clips per class, 5 seconds per clip) suitable for environmental
