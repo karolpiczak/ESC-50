@@ -14,7 +14,7 @@ The dataset consists of 50 classes of recordings in 5 loosely defined groups:
 - **[105 - Frog](https://github.com/karoldvl/ESC-50/tree/master/105%20-%20Frog)**
 - **[106 - Cat](https://github.com/karoldvl/ESC-50/tree/master/106%20-%20Cat)**
 - **[107 - Hen](https://github.com/karoldvl/ESC-50/tree/master/107%20-%20Hen)**
-- **[108 - Insects](https://github.com/karoldvl/ESC-50/tree/master/108%20-%20Insects)**
+- **[108 - Insects (flying)](https://github.com/karoldvl/ESC-50/tree/master/108%20-%20Insects)**
 - **[109 - Sheep](https://github.com/karoldvl/ESC-50/tree/master/109%20-%20Sheep)**
 - **[110 - Crow](https://github.com/karoldvl/ESC-50/tree/master/110%20-%20Crow)**
 
@@ -395,7 +395,7 @@ Licensing details for individual clips:
 - **[5-263831-A.ogg](https://github.com/karoldvl/ESC-50/raw/master/107%20-%20Hen/5-263831-A.ogg)**: clip derived from [12092014_port2000_mostki_hens.mp3](http://www.freesound.org/people/miastodzwiekow/sounds/263831/) by *miastodzwiekow* ([CC-BY](http://creativecommons.org/licenses/by/3.0/))
 - **[5-263831-B.ogg](https://github.com/karoldvl/ESC-50/raw/master/107%20-%20Hen/5-263831-B.ogg)**: clip derived from [12092014_port2000_mostki_hens.mp3](http://www.freesound.org/people/miastodzwiekow/sounds/263831/) by *miastodzwiekow* ([CC-BY](http://creativecommons.org/licenses/by/3.0/))
 
-**108 - Insects**:
+**108 - Insects (flying)**:
 - **[1-17585-A.ogg](https://github.com/karoldvl/ESC-50/raw/master/108%20-%20Insects/1-17585-A.ogg)**: clip derived from [20060328.fat.fly.flac](http://www.freesound.org/people/dobroide/sounds/17585/) by *dobroide* ([CC-BY](http://creativecommons.org/licenses/by/3.0/))
 - **[1-19501-A.ogg](https://github.com/karoldvl/ESC-50/raw/master/108%20-%20Insects/1-19501-A.ogg)**: clip derived from [20060524.fly.flac](http://www.freesound.org/people/dobroide/sounds/19501/) by *dobroide* ([CC-BY](http://creativecommons.org/licenses/by/3.0/))
 - **[1-46938-A.ogg](https://github.com/karoldvl/ESC-50/raw/master/108%20-%20Insects/1-46938-A.ogg)**: clip derived from [flys-I.wav](http://www.freesound.org/people/galeku/sounds/46938/) by *galeku* ([CC0](http://creativecommons.org/publicdomain/zero/1.0/))
