@@ -91,7 +91,7 @@ The dataset can be downloaded as a single .zip file (~200 MB):
 
 Waveforms and mel-spectrograms of ESC-50 dataset recordings:
 
-![Waveforms and mel-spectrograms of ESC-50 dataset recordings](https://github.com/karoldvl/ESC-50/raw/master/ESC-50.png "Waveforms and mel-spectrograms of ESC-50 dataset recordings")
+[![Waveforms and mel-spectrograms of ESC-50 dataset recordings](https://github.com/karoldvl/ESC-50/raw/master/ESC-50-th.png "Waveforms and mel-spectrograms of ESC-50 dataset recordings")](https://github.com/karoldvl/ESC-50/raw/master/ESC-50.png)
 
 ## License
 
