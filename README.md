@@ -4,6 +4,8 @@
 
 The **ESC-50 dataset** is a public labeled set of 2000 environmental recordings (50 classes, 40 clips per class, 5 seconds per clip) suitable for environmental sound classification tasks.
 
+See **[ESC: Dataset for Environmental Sound Classification - paper replication data](https://github.com/karoldvl/paper-2015-esc-dataset)** for the full paper with a more thorough analysis.
+
 The dataset consists of 50 classes of recordings in 5 loosely defined groups:
 
 **Animals**
@@ -98,5 +100,11 @@ Waveforms and mel-spectrograms of ESC-50 dataset recordings:
 The dataset is available under the terms of the [Creative Commons license - Attribution-NonCommercial](http://creativecommons.org/licenses/by-nc/3.0/).
 
 A smaller subset ([ESC-10](https://github.com/karoldvl/ESC-10/)) is available under CC BY (Attribution).
+
+In academic settings please cite:
+
+> K. J. Piczak. **ESC: Dataset for Environmental Sound Classification**. In *Proceedings of the ACM International Conference on Multimedia*, in press, ACM, 2015.
+
+> [DOI: http://dx.doi.org/10.1145/2733373.2806390]
 
 Due to GitHub limitations (README length limit) licensing details for individual clips are available in the [plain text README](https://raw.githubusercontent.com/karoldvl/ESC-50/master/README.txt).
