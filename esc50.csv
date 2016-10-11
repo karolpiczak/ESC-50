@@ -1,4 +1,4 @@
-filename,fold,category,category_name,esc10,src_file,take
+filename,fold,target,category,esc10,src_file,take
 1-100032-A-0.wav,1,0,dog,True,100032,A
 1-100038-A-14.wav,1,14,chirping_birds,False,100038,A
 1-100210-A-36.wav,1,36,vacuum_cleaner,False,100210,A
