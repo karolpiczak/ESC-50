@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.1
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "requirements.txt" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run:
+          name: Install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            apt-get update && apt-get install -y imagemagick
+            pip install -q pytest pytest-xdist pytest-cov python-coveralls coverage pytest-timeout pep8 pytest-pep8 pylint pytest-pylint pydocstyle
+            pip install -q -r requirements.txt
+      - run:
+          name: Install font
+          command: |
+            cd /usr/share/fonts
+            wget --no-verbose "https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Regular.ttf"
+            fc-cache -fv
+            rm -f ~/.cache/matplotlib/fontList*
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+      - run: export PYTHONPATH=$PWD:$PYTHONPATH
+      - run:
+          name: Dataset tests
+          command: |
+            . venv/bin/activate
+            pytest -n0
