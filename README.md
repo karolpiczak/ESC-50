@@ -5,7 +5,7 @@
 
 ## ESC-50: Dataset for Environmental Sound Classification
 
-> ###### [Overview](#esc-50-dataset-for-environmental-sound-classification) | [Download](#download) | [Repository content](#repository-content) | [License](#license) | [Citing](#citing) | [Caveats](#caveats) | [Changelog](#changelog)
+> ###### [Overview](#esc-50-dataset-for-environmental-sound-classification) | [Results](#results) | [Download](#download) | [Repository content](#repository-content) | [License](#license) | [Citing](#citing) | [Caveats](#caveats) | [Changelog](#changelog)
 
 <img src="esc50.gif" alt="ESC-50 clip preview" title="ESC-50 clip preview" align="right" />
 
@@ -30,6 +30,12 @@ Clips in this dataset have been manually extracted from public field recordings 
 
 A more thorough description of the dataset is available in the original [paper](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf) with some supplementary materials on GitHub: **[ESC: Dataset for Environmental Sound Classification - paper replication data](https://github.com/karoldvl/paper-2015-esc-dataset)**.
 
+
+## Results
+
+| <sub>Title</sub> | <sub>Notes</sub> | <sub>Accuracy</sub> | <sub>Paper</sub> | <sub>Code</sub> |
+| :--- | :--- | :--- | :--- | :--- |
+| <sub>**Environmental Sound Classification with Convolutional Neural Networks**</sub> | <sub>Convolutional neural network with 2 convolutional layers and 2 fully-connected, working on mel-spectrograms, vertical filters.</sub> | <sub>64.5%</sub> | <sub>[piczak2015](http://karol.piczak.com/papers/Piczak2015-ESC-ConvNet.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-convnet">:scroll:</a> |
 
 ## Download
 
