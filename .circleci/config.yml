@@ -12,20 +12,23 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run:
-          name: Install dependencies
+          name: Install packages
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            apt-get update && apt-get install -y imagemagick
-            pip install -q pytest pytest-xdist pytest-cov python-coveralls coverage pytest-timeout pep8 pytest-pep8 pylint pytest-pylint pydocstyle
-            pip install -q -r requirements.txt
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
       - run:
           name: Install font
           command: |
             cd /usr/share/fonts
-            wget --no-verbose "https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Regular.ttf"
+            sudo wget --no-verbose "https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Regular.ttf"
             fc-cache -fv
-            rm -f ~/.cache/matplotlib/fontList*
+      - run:
+          name: Install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -q pytest pytest-xdist pytest-cov python-coveralls coverage pytest-timeout pep8 pytest-pep8 pylint pytest-pylint pydocstyle
+            pip install -q -r requirements.txt
       - save_cache:
           paths:
             - ./venv
@@ -36,3 +39,6 @@ jobs:
           command: |
             . venv/bin/activate
             pytest -n0
+      - store_artifacts:
+          path: ~/repo/_esc50.gif
+          destination: _esc50.gif
