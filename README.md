@@ -2,13 +2,14 @@
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC%203.0-blue.svg" align="right" />
 <a href="https://circleci.com/gh/karoldvl/ESC-50"><img src="https://circleci.com/gh/karoldvl/ESC-50.svg?style=svg" /></a>
 
+
 ## ESC-50: Dataset for Environmental Sound Classification
 
 > ###### [Overview](#esc-50-dataset-for-environmental-sound-classification) | [Download](#download) | [Repository content](#repository-content) | [License](#license) | [Citing](#citing) | [Caveats](#caveats) | [Changelog](#changelog)
 
 <img src="esc50.gif" alt="ESC-50 clip preview" title="ESC-50 clip preview" align="right" />
 
-The **ESC-50 dataset** is a labeled collection of 2000 environmental audio recordings suitable for benchmarking approaches to environmental sound classification.
+The **ESC-50 dataset** is a labeled collection of 2000 environmental audio recordings suitable for benchmarking methods of environmental sound classification.
 
 The dataset consists of 5-second-long recordings organized into 50 semantical classes (with 40 examples per class) loosely arranged into 5 major categories:
 
@@ -29,11 +30,13 @@ Clips in this dataset have been manually extracted from public field recordings 
 
 A more thorough description of the dataset is available in the original [paper](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf) with some supplementary materials on GitHub: **[ESC: Dataset for Environmental Sound Classification - paper replication data](https://github.com/karoldvl/paper-2015-esc-dataset)**.
 
+
 ## Download
 
 The dataset can be downloaded as a single .zip file (~600 MB):
 
 **[Download ESC-50 dataset](https://github.com/karoldvl/ESC-50/archive/master.zip)**
+
 
 ## Repository content
 
@@ -61,6 +64,7 @@ The dataset can be downloaded as a single .zip file (~600 MB):
 
   Additional data pertaining to the crowdsourcing experiment (human classification accuracy).
 
+
 ## License
 
 The dataset is available under the terms of the [Creative Commons Attribution Non-Commercial license](http://creativecommons.org/licenses/by-nc/3.0/).
@@ -68,6 +72,7 @@ The dataset is available under the terms of the [Creative Commons Attribution No
 A smaller subset (clips tagged as *ESC-10*) is distributed under CC BY (Attribution).
 
 Attributions for each clip are available in the [ LICENSE file](LICENSE).
+
 
 ## Citing
 
@@ -90,26 +95,22 @@ If you find this dataset useful in an academic setting please cite:
       pages = {1015--1018}
     }
 
-<p>&nbsp;</p>
 
 ## Caveats
 
 Please be aware of potential information leakage while training models on *ESC-50*, as some of the original Freesound recordings were already preprocessed in a manner that might be class dependent (mostly bandlimiting). Unfortunately, this issue went unnoticed when creating the original version of the dataset. Due to the number of methods already evaluated on *ESC-50*, no changes rectifying this issue will be made in order to preserve comparability.
 
 
-
 ## Changelog
 
 ###### v2.0.0 (2017-12-13)
 
-<sub>• Change to WAV version as default.</sub>
+> <sub>• Change to WAV version as default.</sub>
 
 ###### v2.0.0-pre (2016-10-10) (wav-files branch)
 
-<sub>• Replace OGG recordings with cropped WAV files for easier loading and frame-level precision (some of the OGG recordings had a slightly different length when loaded).</sub>
-
-<sub>• Move recordings to a one directory structure with a meta CSV file.</sub>
+> <sub>• Replace OGG recordings with cropped WAV files for easier loading and frame-level precision (some of the OGG recordings had a slightly different length when loaded).<br/>• Move recordings to a one directory structure with a meta CSV file.</sub>
 
 ###### v1.0.0 (2015-04-15)
 
-<sub>• Initial version of the dataset (OGG format).</sub>
+> <sub>• Initial version of the dataset (OGG format).</sub>
