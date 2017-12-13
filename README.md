@@ -1,11 +1,11 @@
-<a href="https://github.com/karoldvl/ESC-50/archive/master.zip"><img src="https://img.shields.io/badge/download-.zip-ff69b4.svg" alt="Download" align="right" /></a>
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC%203.0-blue.svg" align="right" />
-<a href="https://circleci.com/gh/karoldvl/ESC-50"><img src="https://circleci.com/gh/karoldvl/ESC-50.svg?style=svg" /></a>
-
-
 ## ESC-50: Dataset for Environmental Sound Classification
 
+<a href="https://github.com/karoldvl/ESC-50/archive/master.zip"><img src="https://img.shields.io/badge/download-.zip-ff69b4.svg" alt="Download" align="right" /></a>
+
 > ###### [Overview](#esc-50-dataset-for-environmental-sound-classification) | [Results](#results) | [Download](#download) | [Repository content](#repository-content) | [License](#license) | [Citing](#citing) | [Caveats](#caveats) | [Changelog](#changelog)
+
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC%203.0-blue.svg" />
+<a href="https://circleci.com/gh/karoldvl/ESC-50"><img src="https://circleci.com/gh/karoldvl/ESC-50.svg?style=svg" /></a>
 
 <img src="esc50.gif" alt="ESC-50 clip preview" title="ESC-50 clip preview" align="right" />
 
@@ -33,9 +33,15 @@ A more thorough description of the dataset is available in the original [paper](
 
 ## Results
 
+
+
 | <sub>Title</sub> | <sub>Notes</sub> | <sub>Accuracy</sub> | <sub>Paper</sub> | <sub>Code</sub> |
 | :--- | :--- | :--- | :--- | :--- |
-| <sub>**Environmental Sound Classification with Convolutional Neural Networks**</sub> | <sub>Convolutional neural network with 2 convolutional layers and 2 fully-connected, working on mel-spectrograms, vertical filters.</sub> | <sub>64.5%</sub> | <sub>[piczak2015](http://karol.piczak.com/papers/Piczak2015-ESC-ConvNet.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-convnet">:scroll:</a> |
+| :headphones: <sub>***Human accuracy***</sub> | <sub>Crowdsourcing experiment in classifying ESC-50.</sub> | <sub>81.3%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
+| <sub>**Environmental Sound Classification with Convolutional Neural Networks**</sub> | <sub>Convolutional neural network with 2 convolutional and 2 fully-connected layers, mel-spectrograms as input, vertical filters in the first layer.</sub> | <sub>64.5%</sub> | <sub>[piczak2015b](http://karol.piczak.com/papers/Piczak2015-ESC-ConvNet.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-convnet">:scroll:</a> |
+| :bar_chart: <sub>***Baseline - random forest***</sub> | <sub>Baseline ML approach (MFCC & ZCR + random forest).</sub> | <sub>44.3%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
+| :bar_chart: <sub>***Baseline - SVM***</sub> | <sub>Baseline ML approach (MFCC & ZCR + SVM).</sub> | <sub>39.6%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
+| :bar_chart: <sub>***Baseline - k-NN***</sub> | <sub>Baseline ML approach (MFCC & ZCR + k-NN).</sub> | <sub>32.2%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
 
 ## Download
 
@@ -82,6 +88,8 @@ Attributions for each clip are available in the [ LICENSE file](LICENSE).
 
 ## Citing
 
+<a href="http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf"><img src="https://img.shields.io/badge/download%20paper-PDF-ff69b4.svg" alt="Download paper in PDF format" title="Download paper in PDF format" align="right" /></a>
+
 If you find this dataset useful in an academic setting please cite:
 
 > K. J. Piczak. **ESC: Dataset for Environmental Sound Classification**. *Proceedings of the 23rd Annual ACM Conference on Multimedia*, Brisbane, Australia, 2015.
@@ -100,7 +108,6 @@ If you find this dataset useful in an academic setting please cite:
       publisher = {{ACM Press}},
       pages = {1015--1018}
     }
-
 
 ## Caveats
 
