@@ -1,11 +1,10 @@
-[![GitHub license](https://img.shields.io/badge/license-CC%20BY--NC%203.0-blue.svg)](LICENSE)
-[![CircleCI](https://circleci.com/gh/karoldvl/ESC-50.svg?style=svg)](https://circleci.com/gh/karoldvl/ESC-50)
+<a href="https://github.com/karoldvl/ESC-50/archive/master.zip"><img src="https://img.shields.io/badge/download-.zip-ff69b4.svg" alt="Download" align="right" /></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC%203.0-blue.svg" align="right" />
+<a href="https://circleci.com/gh/karoldvl/ESC-50"><img src="https://circleci.com/gh/karoldvl/ESC-50.svg?style=svg" /></a>
 
 ## ESC-50: Dataset for Environmental Sound Classification
 
-> ###### [Overview](#overview) | [Download](#download) | [License](#license) | [Citing](#citing) | [Caveats](#caveats)
-
-### Overview
+> ###### [Overview](#esc-50-dataset-for-environmental-sound-classification) | [Download](#download) | [Repository content](#repository-content) | [License](#license) | [Citing](#citing) | [Caveats](#caveats) | [Changelog](#changelog)
 
 <img src="esc50.gif" alt="ESC-50 clip preview" title="ESC-50 clip preview" align="right" />
 
@@ -30,13 +29,13 @@ Clips in this dataset have been manually extracted from public field recordings 
 
 A more thorough description of the dataset is available in the original [paper](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf) with some supplementary materials on GitHub: **[ESC: Dataset for Environmental Sound Classification - paper replication data](https://github.com/karoldvl/paper-2015-esc-dataset)**.
 
-### Download
+## Download
 
 The dataset can be downloaded as a single .zip file (~600 MB):
 
 **[Download ESC-50 dataset](https://github.com/karoldvl/ESC-50/archive/master.zip)**
 
-### Repository content
+## Repository content
 
 - [`audio/*.wav`](audio/)
 
@@ -62,17 +61,21 @@ The dataset can be downloaded as a single .zip file (~600 MB):
 
   Additional data pertaining to the crowdsourcing experiment (human classification accuracy).
 
-### License
+## License
 
 The dataset is available under the terms of the [Creative Commons Attribution Non-Commercial license](http://creativecommons.org/licenses/by-nc/3.0/).
 
 A smaller subset (clips tagged as *ESC-10*) is distributed under CC BY (Attribution).
 
-Attributions for each clip are available in the [ LICENSE file](https://raw.githubusercontent.com/karoldvl/ESC-50/master/LICENSE).
+Attributions for each clip are available in the [ LICENSE file](LICENSE).
 
-### Citing
+## Citing
 
 If you find this dataset useful in an academic setting please cite:
+
+> K. J. Piczak. **ESC: Dataset for Environmental Sound Classification**. *Proceedings of the 23rd Annual ACM Conference on Multimedia*, Brisbane, Australia, 2015.
+> 
+> [DOI: http://dx.doi.org/10.1145/2733373.2806390]
 
     @inproceedings{piczak2015dataset,
       title = {{ESC}: {Dataset} for {Environmental Sound Classification}},
@@ -87,10 +90,26 @@ If you find this dataset useful in an academic setting please cite:
       pages = {1015--1018}
     }
 
-> K. J. Piczak. **ESC: Dataset for Environmental Sound Classification**. *Proceedings of the 23rd Annual ACM Conference on Multimedia*, Brisbane, Australia, 2015.
-> 
-> [DOI: http://dx.doi.org/10.1145/2733373.2806390]
+<p>&nbsp;</p>
 
-### Caveats
+## Caveats
 
 Please be aware of potential information leakage while training models on *ESC-50*, as some of the original Freesound recordings were already preprocessed in a manner that might be class dependent (mostly bandlimiting). Unfortunately, this issue went unnoticed when creating the original version of the dataset. Due to the number of methods already evaluated on *ESC-50*, no changes rectifying this issue will be made in order to preserve comparability.
+
+
+
+## Changelog
+
+###### v2.0.0 (2017-12-13)
+
+<sub>• Change to WAV version as default.</sub>
+
+###### v2.0.0-pre (2016-10-10) (wav-files branch)
+
+<sub>• Replace OGG recordings with cropped WAV files for easier loading and frame-level precision (some of the OGG recordings had a slightly different length when loaded).</sub>
+
+<sub>• Move recordings to a one directory structure with a meta CSV file.</sub>
+
+###### v1.0.0 (2015-04-15)
+
+<sub>• Initial version of the dataset (OGG format).</sub>
