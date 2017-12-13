@@ -1,110 +1,128 @@
-# ESC-50: Dataset for Environmental Sound Classification
+## ESC-50: Dataset for Environmental Sound Classification
 
-[Download](#download) | [A peek inside](#a-peek-inside) | [License](#license)
+> ###### [Overview](#esc-50-dataset-for-environmental-sound-classification) | [Results](#results) | [Download](#download) | [Repository content](#repository-content) | [License](#license) | [Citing](#citing) | [Caveats](#caveats) | [Changelog](#changelog)
+>
+> <a href="https://circleci.com/gh/karoldvl/ESC-50"><img src="https://circleci.com/gh/karoldvl/ESC-50.svg?style=svg" /></a>&nbsp;
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC-blue.svg" />&nbsp;
+<a href="https://github.com/karoldvl/ESC-50/archive/master.zip"><img src="https://img.shields.io/badge/download-.zip-ff69b4.svg" alt="Download" /></a>&nbsp;
 
-The **ESC-50 dataset** is a public labeled set of 2000 environmental recordings (50 classes, 40 clips per class, 5 seconds per clip) suitable for environmental sound classification tasks.
+<img src="esc50.gif" alt="ESC-50 clip preview" title="ESC-50 clip preview" align="right" />
 
-See **[ESC: Dataset for Environmental Sound Classification - paper replication data](https://github.com/karoldvl/paper-2015-esc-dataset)** for the full paper with a more thorough analysis.
+The **ESC-50 dataset** is a labeled collection of 2000 environmental audio recordings suitable for benchmarking methods of environmental sound classification.
 
-The dataset consists of 50 classes of recordings in 5 loosely defined groups:
+The dataset consists of 5-second-long recordings organized into 50 semantical classes (with 40 examples per class) loosely arranged into 5 major categories:
 
-**Animals**
-- **[101 - Dog](https://github.com/karoldvl/ESC-50/tree/master/101%20-%20Dog)**
-- **[102 - Rooster](https://github.com/karoldvl/ESC-50/tree/master/102%20-%20Rooster)**
-- **[103 - Pig](https://github.com/karoldvl/ESC-50/tree/master/103%20-%20Pig)**
-- **[104 - Cow](https://github.com/karoldvl/ESC-50/tree/master/104%20-%20Cow)**
-- **[105 - Frog](https://github.com/karoldvl/ESC-50/tree/master/105%20-%20Frog)**
-- **[106 - Cat](https://github.com/karoldvl/ESC-50/tree/master/106%20-%20Cat)**
-- **[107 - Hen](https://github.com/karoldvl/ESC-50/tree/master/107%20-%20Hen)**
-- **[108 - Insects (flying)](https://github.com/karoldvl/ESC-50/tree/master/108%20-%20Insects)**
-- **[109 - Sheep](https://github.com/karoldvl/ESC-50/tree/master/109%20-%20Sheep)**
-- **[110 - Crow](https://github.com/karoldvl/ESC-50/tree/master/110%20-%20Crow)**
+| <sub>Animals</sub> | <sub>Natural soundscapes & water sounds </sub> | <sub>Human, non-speech sounds</sub> | <sub>Interior/domestic sounds</sub> | <sub>Exterior/urban noises</sub> |
+| :--- | :--- | :--- | :--- | :--- |
+| <sub>Dog</sub> | <sub>Rain</sub> | <sub>Crying baby</sub> | <sub>Door knock</sub> | <sub>Helicopter</sub></sub> |
+| <sub>Rooster</sub> | <sub>Sea waves</sub> | <sub>Sneezing</sub> | <sub>Mouse click</sub> | <sub>Chainsaw</sub> |
+| <sub>Pig</sub> | <sub>Crackling fire</sub> | <sub>Clapping</sub> | <sub>Keyboard typing</sub> | <sub>Siren</sub> |
+| <sub>Cow</sub> | <sub>Crickets</sub> | <sub>Breathing</sub> | <sub>Door, wood creaks</sub> | <sub>Car horn</sub> |
+| <sub>Frog</sub> | <sub>Chirping birds</sub> | <sub>Coughing</sub> | <sub>Can opening</sub> | <sub>Engine</sub> |
+| <sub>Cat</sub> | <sub>Water drops</sub> | <sub>Footsteps</sub> | <sub>Washing machine</sub> | <sub>Train</sub> |
+| <sub>Hen</sub> | <sub>Wind</sub> | <sub>Laughing</sub> | <sub>Vacuum cleaner</sub> | <sub>Church bells</sub> |
+| <sub>Insects (flying)</sub> | <sub>Pouring water</sub> | <sub>Brushing teeth</sub> | <sub>Clock alarm</sub> | <sub>Airplane</sub> |
+| <sub>Sheep</sub> | <sub>Toilet flush</sub> | <sub>Snoring</sub> | <sub>Clock tick</sub> | <sub>Fireworks</sub> |
+| <sub>Crow</sub> | <sub>Thunderstorm</sub> | <sub>Drinking, sipping</sub> | <sub>Glass breaking</sub> | <sub>Hand saw</sub> |
 
-**Natural soundscapes & water sounds**
-- **[201 - Rain](https://github.com/karoldvl/ESC-50/tree/master/201%20-%20Rain)**
-- **[202 - Sea waves](https://github.com/karoldvl/ESC-50/tree/master/202%20-%20Sea%20waves)**
-- **[203 - Crackling fire](https://github.com/karoldvl/ESC-50/tree/master/203%20-%20Crackling%20fire)**
-- **[204 - Crickets](https://github.com/karoldvl/ESC-50/tree/master/204%20-%20Crickets)**
-- **[205 - Chirping birds](https://github.com/karoldvl/ESC-50/tree/master/205%20-%20Chirping%20birds)**
-- **[206 - Water drops](https://github.com/karoldvl/ESC-50/tree/master/206%20-%20Water%20drops)**
-- **[207 - Wind](https://github.com/karoldvl/ESC-50/tree/master/207%20-%20Wind)**
-- **[208 - Pouring water](https://github.com/karoldvl/ESC-50/tree/master/208%20-%20Pouring%20water)**
-- **[209 - Toilet flush](https://github.com/karoldvl/ESC-50/tree/master/209%20-%20Toilet%20flush)**
-- **[210 - Thunderstorm](https://github.com/karoldvl/ESC-50/tree/master/210%20-%20Thunderstorm)**
+Clips in this dataset have been manually extracted from public field recordings gathered by the **[Freesound.org project](http://freesound.org/)**. The dataset has been prearranged into 5 folds for comparable cross-validation, making sure that fragments from the same original source file are contained in a single fold.
 
-**Human, non-speech sounds**
-- **[301 - Crying baby](https://github.com/karoldvl/ESC-50/tree/master/301%20-%20Crying%20baby)**
-- **[302 - Sneezing](https://github.com/karoldvl/ESC-50/tree/master/302%20-%20Sneezing)**
-- **[303 - Clapping](https://github.com/karoldvl/ESC-50/tree/master/303%20-%20Clapping)**
-- **[304 - Breathing](https://github.com/karoldvl/ESC-50/tree/master/304%20-%20Breathing)**
-- **[305 - Coughing](https://github.com/karoldvl/ESC-50/tree/master/305%20-%20Coughing)**
-- **[306 - Footsteps](https://github.com/karoldvl/ESC-50/tree/master/306%20-%20Footsteps)**
-- **[307 - Laughing](https://github.com/karoldvl/ESC-50/tree/master/307%20-%20Laughing)**
-- **[308 - Brushing teeth](https://github.com/karoldvl/ESC-50/tree/master/308%20-%20Brushing%20teeth)**
-- **[309 - Snoring](https://github.com/karoldvl/ESC-50/tree/master/309%20-%20Snoring)**
-- **[310 - Drinking - sipping](https://github.com/karoldvl/ESC-50/tree/master/310%20-%20Drinking%20-%20sipping)**
+A more thorough description of the dataset is available in the original [paper](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf) with some supplementary materials on GitHub: **[ESC: Dataset for Environmental Sound Classification - paper replication data](https://github.com/karoldvl/paper-2015-esc-dataset)**.
 
-**Interior/domestic sounds**
-- **[401 - Door knock](https://github.com/karoldvl/ESC-50/tree/master/401%20-%20Door%20knock)**
-- **[402 - Mouse click](https://github.com/karoldvl/ESC-50/tree/master/402%20-%20Mouse%20click)**
-- **[403 - Keyboard typing](https://github.com/karoldvl/ESC-50/tree/master/403%20-%20Keyboard%20typing)**
-- **[404 - Door - wood creaks](https://github.com/karoldvl/ESC-50/tree/master/404%20-%20Door%20-%20wood%20creaks)**
-- **[405 - Can opening](https://github.com/karoldvl/ESC-50/tree/master/405%20-%20Can%20opening)**
-- **[406 - Washing machine](https://github.com/karoldvl/ESC-50/tree/master/406%20-%20Washing%20machine)**
-- **[407 - Vacuum cleaner](https://github.com/karoldvl/ESC-50/tree/master/407%20-%20Vacuum%20cleaner)**
-- **[408 - Clock alarm](https://github.com/karoldvl/ESC-50/tree/master/408%20-%20Clock%20alarm)**
-- **[409 - Clock tick](https://github.com/karoldvl/ESC-50/tree/master/409%20-%20Clock%20tick)**
-- **[410 - Glass breaking](https://github.com/karoldvl/ESC-50/tree/master/410%20-%20Glass%20breaking)**
 
-**Exterior/urban noises**
-- **[501 - Helicopter](https://github.com/karoldvl/ESC-50/tree/master/501%20-%20Helicopter)**
-- **[502 - Chainsaw](https://github.com/karoldvl/ESC-50/tree/master/502%20-%20Chainsaw)**
-- **[503 - Siren](https://github.com/karoldvl/ESC-50/tree/master/503%20-%20Siren)**
-- **[504 - Car horn](https://github.com/karoldvl/ESC-50/tree/master/504%20-%20Car%20horn)**
-- **[505 - Engine](https://github.com/karoldvl/ESC-50/tree/master/505%20-%20Engine)**
-- **[506 - Train](https://github.com/karoldvl/ESC-50/tree/master/506%20-%20Train)**
-- **[507 - Church bells](https://github.com/karoldvl/ESC-50/tree/master/507%20-%20Church%20bells)**
-- **[508 - Airplane](https://github.com/karoldvl/ESC-50/tree/master/508%20-%20Airplane)**
-- **[509 - Fireworks](https://github.com/karoldvl/ESC-50/tree/master/509%20-%20Fireworks)**
-- **[510 - Hand saw](https://github.com/karoldvl/ESC-50/tree/master/510%20-%20Hand%20saw)**
+## Results
 
-Clips have been constructed from public field recordings gathered by the **[Freesound.org project](http://freesound.org/)**. The dataset has been prearranged into 5 folds. Clips stemming from the same original source file are contained in a single fold.
 
-**File naming scheme:**
-```
-category_id - category_name/fold_number-Freesound_clip_ID-take_letter.ogg
-```
 
-**File details:**
-```
-5-second-long recordings reconverted to a unified format:
-- 44100 Hz,
-- single channel (monophonic),
-- Vorbis/Ogg compression @ 192 kbit/s. 
-```
+| <sub>Title</sub> | <sub>Notes</sub> | <sub>Accuracy</sub> | <sub>Paper</sub> | <sub>Code</sub> |
+| :--- | :--- | :--- | :--- | :--- |
+| :headphones: <sub>***Human accuracy***</sub> | <sub>Crowdsourcing experiment in classifying ESC-50.</sub> | <sub>81.3%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
+| <sub>**Environmental Sound Classification with Convolutional Neural Networks**</sub> | <sub>Convolutional neural network with 2 convolutional and 2 fully-connected layers, mel-spectrograms as input, vertical filters in the first layer.</sub> | <sub>64.5%</sub> | <sub>[piczak2015b](http://karol.piczak.com/papers/Piczak2015-ESC-ConvNet.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-convnet">:scroll:</a> |
+| :bar_chart: <sub>***Baseline - random forest***</sub> | <sub>Baseline ML approach (MFCC & ZCR + random forest).</sub> | <sub>44.3%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
+| :bar_chart: <sub>***Baseline - SVM***</sub> | <sub>Baseline ML approach (MFCC & ZCR + SVM).</sub> | <sub>39.6%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
+| :bar_chart: <sub>***Baseline - k-NN***</sub> | <sub>Baseline ML approach (MFCC & ZCR + k-NN).</sub> | <sub>32.2%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
 
 ## Download
 
-The dataset can be downloaded as a single .zip file (~200 MB):
+The dataset can be downloaded as a single .zip file (~600 MB):
 
-[ESC-50 dataset](https://github.com/karoldvl/ESC-50/archive/master.zip)
+**[Download ESC-50 dataset](https://github.com/karoldvl/ESC-50/archive/master.zip)**
 
-## A peek inside
 
-Waveforms and mel-spectrograms of ESC-50 dataset recordings:
+## Repository content
 
-[![Waveforms and mel-spectrograms of ESC-50 dataset recordings](https://github.com/karoldvl/ESC-50/raw/master/ESC-50-th.png "Waveforms and mel-spectrograms of ESC-50 dataset recordings")](https://github.com/karoldvl/ESC-50/raw/master/ESC-50.png)
+- [`audio/*.wav`](audio/)
+
+  2000 audio recordings in WAV format (5 seconds, 44.1 kHz, mono) with the following naming convention:
+  
+  `{FOLD}-{CLIP_ID}-{TAKE}-{TARGET}.wav`
+  
+  - `{FOLD}` - index of the cross-validation fold,
+  - `{CLIP_ID}` - ID of the original Freesound clip,
+  - `{TAKE}` - letter disambiguating between different fragments from the same Freesound clip,
+  - `{TARGET}` - class in numeric format [0, 49].
+
+- [`meta/esc50.csv`](meta/esc50.csv)
+
+  CSV file with the following structure:
+  
+  | <sub>filename</sub> | <sub>fold</sub> | <sub>target</sub> | <sub>category</sub> | <sub>esc10</sub> | <sub>src_file</sub> | <sub>take</sub> |
+  | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+  
+  The `esc10` column indicates if a given file belongs to the *ESC-10* subset (10 selected classes, CC BY license).
+  
+- [`meta/esc50-human.xlsx`](meta/esc50-human.xlsx)
+
+  Additional data pertaining to the crowdsourcing experiment (human classification accuracy).
+
 
 ## License
 
-The dataset is available under the terms of the [Creative Commons license - Attribution-NonCommercial](http://creativecommons.org/licenses/by-nc/3.0/).
+The dataset is available under the terms of the [Creative Commons Attribution Non-Commercial license](http://creativecommons.org/licenses/by-nc/3.0/).
 
-A smaller subset ([ESC-10](https://github.com/karoldvl/ESC-10/)) is available under CC BY (Attribution).
+A smaller subset (clips tagged as *ESC-10*) is distributed under CC BY (Attribution).
 
-In academic settings please cite:
+Attributions for each clip are available in the [ LICENSE file](LICENSE).
 
-> K. J. Piczak. **ESC: Dataset for Environmental Sound Classification**. In *Proceedings of the ACM International Conference on Multimedia*, in press, ACM, 2015.
 
+## Citing
+
+<a href="http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf"><img src="https://img.shields.io/badge/download%20paper-PDF-ff69b4.svg" alt="Download paper in PDF format" title="Download paper in PDF format" align="right" /></a>
+
+If you find this dataset useful in an academic setting please cite:
+
+> K. J. Piczak. **ESC: Dataset for Environmental Sound Classification**. *Proceedings of the 23rd Annual ACM Conference on Multimedia*, Brisbane, Australia, 2015.
+> 
 > [DOI: http://dx.doi.org/10.1145/2733373.2806390]
 
-Due to GitHub limitations (README length limit) licensing details for individual clips are available in the [plain text README](https://raw.githubusercontent.com/karoldvl/ESC-50/master/README.txt).
+    @inproceedings{piczak2015dataset,
+      title = {{ESC}: {Dataset} for {Environmental Sound Classification}},
+      author = {Piczak, Karol J.},
+      booktitle = {Proceedings of the 23rd {Annual ACM Conference} on {Multimedia}},
+      date = {2015-10-13},
+      url = {http://dl.acm.org/citation.cfm?doid=2733373.2806390},
+      doi = {10.1145/2733373.2806390},
+      location = {{Brisbane, Australia}},
+      isbn = {978-1-4503-3459-4},
+      publisher = {{ACM Press}},
+      pages = {1015--1018}
+    }
+
+## Caveats
+
+Please be aware of potential information leakage while training models on *ESC-50*, as some of the original Freesound recordings were already preprocessed in a manner that might be class dependent (mostly bandlimiting). Unfortunately, this issue went unnoticed when creating the original version of the dataset. Due to the number of methods already evaluated on *ESC-50*, no changes rectifying this issue will be made in order to preserve comparability.
+
+
+## Changelog
+
+###### v2.0.0 (2017-12-13)
+
+> <sub>• Change to WAV version as default.</sub>
+
+###### v2.0.0-pre (2016-10-10) (wav-files branch)
+
+> <sub>• Replace OGG recordings with cropped WAV files for easier loading and frame-level precision (some of the OGG recordings had a slightly different length when loaded).<br/>• Move recordings to a one directory structure with a meta CSV file.</sub>
+
+###### v1.0.0 (2015-04-15)
+
+> <sub>• Initial version of the dataset (OGG format).</sub>

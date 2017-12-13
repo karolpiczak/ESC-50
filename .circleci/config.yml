@@ -1,0 +1,44 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.1
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "requirements.txt" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run:
+          name: Install packages
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y imagemagick
+      - run:
+          name: Install font
+          command: |
+            cd /usr/share/fonts
+            sudo wget --no-verbose "https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Regular.ttf"
+            fc-cache -fv
+      - run:
+          name: Install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -q pytest pytest-xdist pytest-cov python-coveralls coverage pytest-timeout pep8 pytest-pep8 pylint pytest-pylint pydocstyle
+            pip install -q -r requirements.txt
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+      - run: export PYTHONPATH=$PWD:$PYTHONPATH
+      - run:
+          name: Dataset tests
+          command: |
+            . venv/bin/activate
+            pytest -n0
+      - store_artifacts:
+          path: ~/repo/_esc50.gif
+          destination: _esc50.gif
