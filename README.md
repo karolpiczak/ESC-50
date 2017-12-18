@@ -32,12 +32,16 @@ A more thorough description of the dataset is available in the original [paper](
 
 ## Results
 
+Numerous machine learning & signal processing approaches have been evaluated on the ESC-50 dataset. Most of them are listed here for convenience. If you know of some other references, you can message me or open a Pull Request directly.
 
+> ###### Terms used in the table:
+> 
+> <sub>• CNN - Convolutional Neural Network<br />• CRNN - Convolutional Recurrent Neural Network<br />• GMM - Gaussian Mixture Model<br />• GTCC - Gammatone Cepstral Coefficients<br />• GTSC - Gammatone Spectral Coefficients<br />• k-NN - k-Neareast Neighbors<br />• MFCC - Mel-Frequency Cepstral Coefficients<br />• MLP - Multi-Layer Perceptron<br />• RBM - Restricted Boltzmann Machine<br />• RNN - Recurrent Neural Network<br />• SVM - Support Vector Machine<br />• TEO - Teager Energy Operator<br />• ZCR - Zero-Crossing Rate</sub>
 
 | <sub>Title</sub> | <sub>Notes</sub> | <sub>Accuracy</sub> | <sub>Paper</sub> | <sub>Code</sub> |
 | :--- | :--- | :--- | :--- | :--- |
 | :headphones: <sub>***Human accuracy***</sub> | <sub>Crowdsourcing experiment in classifying ESC-50.</sub> | <sub>81.3%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
-| <sub>**Environmental Sound Classification with Convolutional Neural Networks**</sub> | <sub>Convolutional neural network with 2 convolutional and 2 fully-connected layers, mel-spectrograms as input, vertical filters in the first layer.</sub> | <sub>64.5%</sub> | <sub>[piczak2015b](http://karol.piczak.com/papers/Piczak2015-ESC-ConvNet.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-convnet">:scroll:</a> |
+| <sub>**Environmental Sound Classification with Convolutional Neural Networks**</sub> | <sub>CNN with 2 convolutional and 2 fully-connected layers, mel-spectrograms as input, vertical filters in the first layer.</sub> | <sub>64.5%</sub> | <sub>[piczak2015b](http://karol.piczak.com/papers/Piczak2015-ESC-ConvNet.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-convnet">:scroll:</a> |
 | :bar_chart: <sub>***Baseline - random forest***</sub> | <sub>Baseline ML approach (MFCC & ZCR + random forest).</sub> | <sub>44.3%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
 | :bar_chart: <sub>***Baseline - SVM***</sub> | <sub>Baseline ML approach (MFCC & ZCR + SVM).</sub> | <sub>39.6%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
 | :bar_chart: <sub>***Baseline - k-NN***</sub> | <sub>Baseline ML approach (MFCC & ZCR + k-NN).</sub> | <sub>32.2%</sub> | <sub>[piczak2015a](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf)</sub> | <a href="https://github.com/karoldvl/paper-2015-esc-dataset">:scroll:</a> |
