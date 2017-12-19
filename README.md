@@ -1,6 +1,6 @@
 ## ESC-50: Dataset for Environmental Sound Classification
 
-> ###### [Overview](#esc-50-dataset-for-environmental-sound-classification) | [Results](#results) | [Download](#download) | [Repository content](#repository-content) | [License](#license) | [Citing](#citing) | [Caveats](#caveats) | [Changelog](#changelog)
+> ###### [Overview](#esc-50-dataset-for-environmental-sound-classification) | [Download](#download) | [Results](#results) | [Repository content](#repository-content) | [License](#license) | [Citing](#citing) | [Caveats](#caveats) | [Changelog](#changelog)
 >
 > <a href="https://circleci.com/gh/karoldvl/ESC-50"><img src="https://circleci.com/gh/karoldvl/ESC-50.svg?style=svg" /></a>&nbsp;
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC-blue.svg" />&nbsp;
@@ -28,6 +28,13 @@ The dataset consists of 5-second-long recordings organized into 50 semantical cl
 Clips in this dataset have been manually extracted from public field recordings gathered by the **[Freesound.org project](http://freesound.org/)**. The dataset has been prearranged into 5 folds for comparable cross-validation, making sure that fragments from the same original source file are contained in a single fold.
 
 A more thorough description of the dataset is available in the original [paper](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf) with some supplementary materials on GitHub: **[ESC: Dataset for Environmental Sound Classification - paper replication data](https://github.com/karoldvl/paper-2015-esc-dataset)**.
+
+
+## Download
+
+The dataset can be downloaded as a single .zip file (~600 MB):
+
+**[Download ESC-50 dataset](https://github.com/karoldvl/ESC-50/archive/master.zip)**
 
 
 ## Results
@@ -90,13 +97,6 @@ Numerous machine learning & signal processing approaches have been evaluated on 
 | <sub>**A real-time environmental sound recognition system for the Android OS**</sub> | <sub>Real-time sound recognition for Android evaluated on ESC-10</sub> | <sub>N/A</sub> | <sub>[pillos2016](https://www.cs.tut.fi/sgn/arg/dcase2016/documents/workshop/Pillos-DCASE2016workshop.pdf)</sub> |  |
 | <sub>**Comparing Time and Frequency Domain for Audio Event Recognition Using Deep Learning**</sub> | <sub>Discriminatory effectiveness of different signal representations compared on ESC-10 and Freiburg-106</sub> | <sub>N/A</sub> | <sub>[hertel2016](https://arxiv.org/pdf/1603.05824.pdf)</sub> |  |
 | <sub>**Audio Event and Scene Recognition: A Unified Approach using Strongly and Weakly Labeled Data**</sub> | <sub>Combination of weakly labeled data (YouTube) with strong labeling (ESC-10) for Acoustic Event Detection</sub> | <sub>N/A</sub> | <sub>[kumar2016a](https://arxiv.org/pdf/1611.04871.pdf)</sub> |  |
-
-
-## Download
-
-The dataset can be downloaded as a single .zip file (~600 MB):
-
-**[Download ESC-50 dataset](https://github.com/karoldvl/ESC-50/archive/master.zip)**
 
 
 ## Repository content
