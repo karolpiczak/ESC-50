@@ -37,8 +37,9 @@ def test_dataset_size(recording_list):
 
 def test_recordings(recording_list):
     for recording in tqdm.tqdm(recording_list):
-        signal = librosa.load('audio/' + recording, sr=44100)[0]
+        signal, rate = librosa.load('audio/' + recording, sr=None)
 
+        assert rate == 44100
         assert len(signal) == 220500  # 5 seconds
         assert np.max(signal) > 0
         assert np.min(signal) < 0
