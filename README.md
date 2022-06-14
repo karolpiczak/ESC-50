@@ -47,6 +47,7 @@ Numerous machine learning & signal processing approaches have been evaluated on 
 
 | <sub>Title</sub> | <sub>Notes</sub> | <sub>Accuracy</sub> | <sub>Paper</sub> | <sub>Code</sub> |
 | :--- | :--- | :--- | :--- | :--- |
+| <sub>**CLAP: Learning Audio Concepts From Natural Language Supervision**</sub> | <sub>CNN model pretrained by natural language supervision</sub> | <sub>96.70%</sub> | <sub>[elizalde2022](https://arxiv.org/pdf/2206.04769.pdf)</sub> |  |
 | <sub>**AST: Audio Spectrogram Transformer**</sub> | <sub>Pure Attention Model Pretrained on AudioSet</sub> | <sub>95.70%</sub> | <sub>[gong2021](https://arxiv.org/pdf/2104.01778.pdf)</sub> | <a href="https://github.com/YuanGongND/ast">:scroll:</a> |
 | <sub>**A Sequential Self Teaching Approach for Improving Generalization in Sound Event Recognition**</sub> | <sub>Multi-stage sequential learning with knowledge transfer from Audioset</sub> | <sub>94.10%</sub> | <sub>[kumar2020](https://arxiv.org/pdf/2007.00144.pdf)</sub> |  |
 | <sub>**Efficient End-to-End Audio Embeddings Generation for Audio Classification on Target Applications**</sub> | <sub>CNN model pretrained on AudioSet</sub> | <sub>92.32%</sub> | <sub>[lopez-meyer2021](https://ieeexplore.ieee.org/document/9414229)</sub> |  |
