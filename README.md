@@ -39,6 +39,20 @@ The dataset can be downloaded as a single .zip file (~600 MB):
 
 ## Results
 
+### Unsupervised Methods
+
+We consider two unsupervised learning settings ([Zhao et al., 2022](https://arxiv.org/abs/2112.08995)):
+
+1. Zero resource (ZR): No human supervision (i.e., any form of manually labeled audio-text pairs) is used in training.
+2. Zero shot (ZS): Human supervision (i.e., labeled audio-text pairs outside the ESC-50 domain) may be used in training.
+
+| <sub>Title</sub> | <sub>Notes</sub> | <sub>ZS</sub> | <sub>ZR</sub> | <sub>Paper</sub> | <sub>Code</sub> |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| <sub>**Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer**</sub> | <sub>**VIP-ANT:** VIsually-Pivoted Audio and(N) Text -- A Transformer model pretrained w/ visual image supervision</sub> | <sub>62.8%</sub> | <sub>69.5%</sub> | <sub>[zhao2022](https://arxiv.org/pdf/2112.08995.pdf)</sub> | <a href="https://github.com/zhaoyanpeng/vipant">:scroll:</a> |
+
+
+### Supervised Methods
+
 Numerous machine learning & signal processing approaches have been evaluated on the ESC-50 dataset. Most of them are listed here. If you know of some other reference, you can message me or open a Pull Request directly.
 
 > ###### Terms used in the table:
