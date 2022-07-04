@@ -39,18 +39,6 @@ The dataset can be downloaded as a single .zip file (~600 MB):
 
 ## Results
 
-### Unsupervised Methods
-
-We consider two unsupervised learning settings ([Zhao et al., 2022](https://arxiv.org/abs/2112.08995)):
-
-1. Zero resource (ZR): No human supervision (i.e., any form of manually labeled audio-text pairs) is used in training.
-2. Zero shot (ZS): Human supervision (i.e., labeled audio-text pairs outside the ESC-50 domain) may be used in training.
-
-| <sub>Title</sub> | <sub>Notes</sub> | <sub>ZS</sub> | <sub>ZR</sub> | <sub>Paper</sub> | <sub>Code</sub> |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| <sub>**Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer**</sub> | <sub>**VIP-ANT:** VIsually-Pivoted Audio and(N) Text -- A Transformer model pretrained w/ visual image supervision</sub> | <sub>62.8%</sub> | <sub>69.5%</sub> | <sub>[zhao2022](https://arxiv.org/pdf/2112.08995.pdf)</sub> | <a href="https://github.com/zhaoyanpeng/vipant">:scroll:</a> |
-
-
 ### Supervised Methods
 
 Numerous machine learning & signal processing approaches have been evaluated on the ESC-50 dataset. Most of them are listed here. If you know of some other reference, you can message me or open a Pull Request directly.
@@ -61,10 +49,10 @@ Numerous machine learning & signal processing approaches have been evaluated on 
 
 | <sub>Title</sub> | <sub>Notes</sub> | <sub>Accuracy</sub> | <sub>Paper</sub> | <sub>Code</sub> |
 | :--- | :--- | :--- | :--- | :--- |
-| <sub>**Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer**</sub> | <sub>**VIP-ANT:** VIsually-Pivoted Audio and(N) Text -- A Transformer model pretrained w/ visual image supervision</sub> | <sub>95.70%</sub> | <sub>[zhao2022](https://arxiv.org/pdf/2112.08995.pdf)</sub> | <a href="https://github.com/zhaoyanpeng/vipant">:scroll:</a> |
 | <sub>**HTS-AT: A Hierarchical Token-Semantic Audio Transformer for Sound Classification and Detection**</sub> | <sub>Transformer model with hierarchical structure and token-semantic modules</sub> | <sub>97.00%</sub> | <sub>[chen2022](https://arxiv.org/pdf/2202.00874.pdf)</sub> | <a href="https://github.com/RetroCirce/HTS-Audio-Transformer">:scroll:</a>   |
 | <sub>**CLAP: Learning Audio Concepts From Natural Language Supervision**</sub> | <sub>CNN model pretrained by natural language supervision</sub> | <sub>96.70%</sub> | <sub>[elizalde2022](https://arxiv.org/pdf/2206.04769.pdf)</sub> |  |
 | <sub>**AST: Audio Spectrogram Transformer**</sub> | <sub>Pure Attention Model Pretrained on AudioSet</sub> | <sub>95.70%</sub> | <sub>[gong2021](https://arxiv.org/pdf/2104.01778.pdf)</sub> | <a href="https://github.com/YuanGongND/ast">:scroll:</a> |
+| <sub>**Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer**</sub> | <sub>**VIP-ANT:** VIsually-Pivoted Audio and(N) Text -- A Transformer model pretrained w/ visual image supervision</sub> | <sub>95.70%</sub> | <sub>[zhao2022](https://arxiv.org/pdf/2112.08995.pdf)</sub> | <a href="https://github.com/zhaoyanpeng/vipant">:scroll:</a> |
 | <sub>**A Sequential Self Teaching Approach for Improving Generalization in Sound Event Recognition**</sub> | <sub>Multi-stage sequential learning with knowledge transfer from Audioset</sub> | <sub>94.10%</sub> | <sub>[kumar2020](https://arxiv.org/pdf/2007.00144.pdf)</sub> |  |
 | <sub>**Efficient End-to-End Audio Embeddings Generation for Audio Classification on Target Applications**</sub> | <sub>CNN model pretrained on AudioSet</sub> | <sub>92.32%</sub> | <sub>[lopez-meyer2021](https://ieeexplore.ieee.org/document/9414229)</sub> |  |
 | <sub>**Urban Sound Tagging using Multi-Channel Audio Feature with Convolutional Neural Networks**</sub> | <sub>Pretrained model with multi-channel features</sub> | <sub>89.50%</sub> | <sub>[kim2020](http://dcase.community/documents/challenge2020/technical_reports/DCASE2020_JHKim_21_t5.pdf)</sub> | <a href="https://github.com/JaehunKim-DeepLearning/Dcase2020_Task5">:scroll:</a> |
@@ -127,6 +115,16 @@ Numerous machine learning & signal processing approaches have been evaluated on 
 | <sub>**Comparing Time and Frequency Domain for Audio Event Recognition Using Deep Learning**</sub> | <sub>Discriminatory effectiveness of different signal representations compared on ESC-10 and Freiburg-106</sub> | <sub>N/A</sub> | <sub>[hertel2016](https://arxiv.org/pdf/1603.05824.pdf)</sub> |  |
 | <sub>**Audio Event and Scene Recognition: A Unified Approach using Strongly and Weakly Labeled Data**</sub> | <sub>Combination of weakly labeled data (YouTube) with strong labeling (ESC-10) for Acoustic Event Detection</sub> | <sub>N/A</sub> | <sub>[kumar2016a](https://arxiv.org/pdf/1611.04871.pdf)</sub> |  |
 
+### Unsupervised Methods
+
+ESC-50 was also evaluated in unsupervised learning settings ([Zhao et al., 2022](https://arxiv.org/abs/2112.08995)):
+
+1. Zero shot (ZS): Human supervision (i.e., labeled audio-text pairs outside the ESC-50 domain) may be used in training.
+2. Zero resource (ZR): No human supervision (i.e., any form of manually labeled audio-text pairs) is used in training.
+
+| <sub>Title</sub> | <sub>Notes</sub> | <sub>ZS</sub> | <sub>ZR</sub> | <sub>Paper</sub> | <sub>Code</sub> |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| <sub>**Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer**</sub> | <sub>**VIP-ANT:** VIsually-Pivoted Audio and(N) Text -- A Transformer model pretrained w/ visual image supervision</sub> | <sub>62.8%</sub> | <sub>69.5%</sub> | <sub>[zhao2022](https://arxiv.org/pdf/2112.08995.pdf)</sub> | <a href="https://github.com/zhaoyanpeng/vipant">:scroll:</a> |
 
 ## Repository content
 
