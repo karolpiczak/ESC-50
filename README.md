@@ -39,6 +39,20 @@ The dataset can be downloaded as a single .zip file (~600 MB):
 
 ## Results
 
+### Unsupervised Methods
+
+We consider two unsupervised learning settings ([Zhao et al., 2022](https://arxiv.org/abs/2112.08995)):
+
+1. Zero resource (ZR): No human supervision (i.e., any form of manually labeled audio-text pairs) is used in training.
+2. Zero shot (ZS): Human supervision (i.e., labeled audio-text pairs outside the ESC-50 domain) may be used in training.
+
+| <sub>Title</sub> | <sub>Notes</sub> | <sub>ZS</sub> | <sub>ZR</sub> | <sub>Paper</sub> | <sub>Code</sub> |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| <sub>**Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer**</sub> | <sub>**VIP-ANT:** VIsually-Pivoted Audio and(N) Text -- A Transformer model pretrained w/ visual image supervision</sub> | <sub>62.8%</sub> | <sub>69.5%</sub> | <sub>[zhao2022](https://arxiv.org/pdf/2112.08995.pdf)</sub> | <a href="https://github.com/zhaoyanpeng/vipant">:scroll:</a> |
+
+
+### Supervised Methods
+
 Numerous machine learning & signal processing approaches have been evaluated on the ESC-50 dataset. Most of them are listed here. If you know of some other reference, you can message me or open a Pull Request directly.
 
 > ###### Terms used in the table:
@@ -47,6 +61,7 @@ Numerous machine learning & signal processing approaches have been evaluated on 
 
 | <sub>Title</sub> | <sub>Notes</sub> | <sub>Accuracy</sub> | <sub>Paper</sub> | <sub>Code</sub> |
 | :--- | :--- | :--- | :--- | :--- |
+| <sub>**Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer**</sub> | <sub>**VIP-ANT:** VIsually-Pivoted Audio and(N) Text -- A Transformer model pretrained w/ visual image supervision</sub> | <sub>95.70%</sub> | <sub>[zhao2022](https://arxiv.org/pdf/2112.08995.pdf)</sub> | <a href="https://github.com/zhaoyanpeng/vipant">:scroll:</a> |
 | <sub>**HTS-AT: A Hierarchical Token-Semantic Audio Transformer for Sound Classification and Detection**</sub> | <sub>Transformer model with hierarchical structure and token-semantic modules</sub> | <sub>97.00%</sub> | <sub>[chen2022](https://arxiv.org/pdf/2202.00874.pdf)</sub> | <a href="https://github.com/RetroCirce/HTS-Audio-Transformer">:scroll:</a>   |
 | <sub>**CLAP: Learning Audio Concepts From Natural Language Supervision**</sub> | <sub>CNN model pretrained by natural language supervision</sub> | <sub>96.70%</sub> | <sub>[elizalde2022](https://arxiv.org/pdf/2206.04769.pdf)</sub> |  |
 | <sub>**AST: Audio Spectrogram Transformer**</sub> | <sub>Pure Attention Model Pretrained on AudioSet</sub> | <sub>95.70%</sub> | <sub>[gong2021](https://arxiv.org/pdf/2104.01778.pdf)</sub> | <a href="https://github.com/YuanGongND/ast">:scroll:</a> |
