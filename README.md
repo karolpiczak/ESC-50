@@ -44,6 +44,7 @@ The dataset can be downloaded as a single .zip file (~600 MB):
 Numerous machine learning & signal processing approaches have been evaluated on the ESC-50 dataset. Most of them are listed here. If you know of some other reference, you can message me or open a Pull Request directly.
 
 > ###### Terms used in the table:
+>
 > <sub>• CNN - Convolutional Neural Network<br />• CRNN - Convolutional Recurrent Neural Network<br />• GMM - Gaussian Mixture Model<br />• GTCC - Gammatone Cepstral Coefficients<br />• GTSC - Gammatone Spectral Coefficients<br />• k-NN - k-Neareast Neighbors<br />• MFCC - Mel-Frequency Cepstral Coefficients<br />• MLP - Multi-Layer Perceptron<br />• RBM - Restricted Boltzmann Machine<br />• RNN - Recurrent Neural Network<br />• SVM - Support Vector Machine<br />• TEO - Teager Energy Operator<br />• ZCR - Zero-Crossing Rate</sub>
 
 | <sub>Title</sub> | <sub>Notes</sub> | <sub>Accuracy</sub> | <sub>Paper</sub> | <sub>Code</sub> |
