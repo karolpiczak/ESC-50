@@ -44,13 +44,13 @@ The dataset can be downloaded as a single .zip file (~600 MB):
 Numerous machine learning & signal processing approaches have been evaluated on the ESC-50 dataset. Most of them are listed here. If you know of some other reference, you can message me or open a Pull Request directly.
 
 > ###### Terms used in the table:
-> 
+>
 > <sub>• CNN - Convolutional Neural Network<br />• CRNN - Convolutional Recurrent Neural Network<br />• GMM - Gaussian Mixture Model<br />• GTCC - Gammatone Cepstral Coefficients<br />• GTSC - Gammatone Spectral Coefficients<br />• k-NN - k-Neareast Neighbors<br />• MFCC - Mel-Frequency Cepstral Coefficients<br />• MLP - Multi-Layer Perceptron<br />• RBM - Restricted Boltzmann Machine<br />• RNN - Recurrent Neural Network<br />• SVM - Support Vector Machine<br />• TEO - Teager Energy Operator<br />• ZCR - Zero-Crossing Rate</sub>
 
 | <sub>Title</sub> | <sub>Notes</sub> | <sub>Accuracy</sub> | <sub>Paper</sub> | <sub>Code</sub> |
 | :--- | :--- | :--- | :--- | :--- |
 | <sub>**HTS-AT: A Hierarchical Token-Semantic Audio Transformer for Sound Classification and Detection**</sub> | <sub>Transformer model with hierarchical structure and token-semantic modules</sub> | <sub>97.00%</sub> | <sub>[chen2022](https://arxiv.org/pdf/2202.00874.pdf)</sub> | <a href="https://github.com/RetroCirce/HTS-Audio-Transformer">:scroll:</a>   |
-| <sub>**CLAP: Learning Audio Concepts From Natural Language Supervision**</sub> | <sub>CNN model pretrained by natural language supervision</sub> | <sub>96.70%</sub> | <sub>[elizalde2022](https://arxiv.org/pdf/2206.04769.pdf)</sub> | <a href="https://github.com/LAION-AI/CLAP">:scroll:</a> |
+| <sub>**CLAP: Learning Audio Concepts From Natural Language Supervision**</sub> | <sub>CNN model pretrained by natural language supervision</sub> | <sub>96.70%</sub> | <sub>[elizalde2022](https://arxiv.org/pdf/2206.04769.pdf)</sub> | <a href="https://github.com/microsoft/CLAP">:scroll:</a> |
 | <sub>**AST: Audio Spectrogram Transformer**</sub> | <sub>Pure Attention Model Pretrained on AudioSet</sub> | <sub>95.70%</sub> | <sub>[gong2021](https://arxiv.org/pdf/2104.01778.pdf)</sub> | <a href="https://github.com/YuanGongND/ast">:scroll:</a> |
 | <sub>**Connecting the Dots between Audio and Text without Parallel Data through Visual Knowledge Transfer**</sub> | <sub>A Transformer model pretrained w/ visual image supervision</sub> | <sub>95.70%</sub> | <sub>[zhao2022](https://arxiv.org/pdf/2112.08995.pdf)</sub> | <a href="https://github.com/zhaoyanpeng/vipant">:scroll:</a> |
 | <sub>**A Sequential Self Teaching Approach for Improving Generalization in Sound Event Recognition**</sub> | <sub>Multi-stage sequential learning with knowledge transfer from Audioset</sub> | <sub>94.10%</sub> | <sub>[kumar2020](https://arxiv.org/pdf/2007.00144.pdf)</sub> |  |
@@ -131,9 +131,9 @@ ESC-50 was also evaluated in unsupervised learning settings ([Zhao et al., 2022]
 - [`audio/*.wav`](audio/)
 
   2000 audio recordings in WAV format (5 seconds, 44.1 kHz, mono) with the following naming convention:
-  
+
   `{FOLD}-{CLIP_ID}-{TAKE}-{TARGET}.wav`
-  
+
   - `{FOLD}` - index of the cross-validation fold,
   - `{CLIP_ID}` - ID of the original Freesound clip,
   - `{TAKE}` - letter disambiguating between different fragments from the same Freesound clip,
@@ -142,12 +142,12 @@ ESC-50 was also evaluated in unsupervised learning settings ([Zhao et al., 2022]
 - [`meta/esc50.csv`](meta/esc50.csv)
 
   CSV file with the following structure:
-  
+
   | <sub>filename</sub> | <sub>fold</sub> | <sub>target</sub> | <sub>category</sub> | <sub>esc10</sub> | <sub>src_file</sub> | <sub>take</sub> |
   | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-  
+
   The `esc10` column indicates if a given file belongs to the *ESC-10* subset (10 selected classes, CC BY license).
-  
+
 - [`meta/esc50-human.xlsx`](meta/esc50-human.xlsx)
 
   Additional data pertaining to the crowdsourcing experiment (human classification accuracy).
@@ -169,7 +169,7 @@ Attributions for each clip are available in the [ LICENSE file](LICENSE).
 If you find this dataset useful in an academic setting please cite:
 
 > K. J. Piczak. **ESC: Dataset for Environmental Sound Classification**. *Proceedings of the 23rd Annual ACM Conference on Multimedia*, Brisbane, Australia, 2015.
-> 
+>
 > [DOI: http://dx.doi.org/10.1145/2733373.2806390]
 
     @inproceedings{piczak2015dataset,
