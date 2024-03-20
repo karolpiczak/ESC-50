@@ -58,7 +58,7 @@ def test_previews(meta):
         for index in range(len(recordings)):
             recording = recordings[index]
             signal = librosa.load('audio/' + recording, sr=44100)[0]
-            spec = librosa.feature.melspectrogram(signal, sr=44100, n_fft=2205, hop_length=441)
+            spec = librosa.feature.melspectrogram(y=signal, sr=44100, n_fft=2205, hop_length=441)
             spec = librosa.power_to_db(spec)
 
             category = meta[meta.filename == recording].category.values[0]
